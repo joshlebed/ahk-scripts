@@ -179,7 +179,7 @@
         HighlightActiveWindow()
         return
   
-      ; old cycle behavior: switch to leqast recent window
+      ; old cycle behavior: switch to least recent window
         s::
         sendinput !+{tab}
         sleep 100
