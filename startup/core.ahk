@@ -258,14 +258,20 @@
       ; ^r::sendinput #{right}
       
       ; minimize window
-        m::WinMinimize, A
+        ; m::WinMinimize, A
+      
+      ; m::b
+      ; .::a
+      m::SendInput {ctrlup}{AltDown}{left}{AltUp}
+      .::SendInput {ctrlup}{AltDown}{right}{AltUp}
+
 
     #If
 
   ; globals
     ; forward/back navigation
-      ^[::SendInput {ctrlup}{AltDown}{left}{AltUp}
-      ^]::SendInput {ctrlup}{AltDown}{right}{AltUp}
+      ; ^[::SendInput {ctrlup}{AltDown}{left}{AltUp}
+      ; ^]::SendInput {ctrlup}{AltDown}{right}{AltUp}
 
     ; iterm style behavior
       ; TODO: switch back and forth between last vscode window and wt
@@ -293,8 +299,6 @@
     ; play with taskbar
       ^f11::WinHide ahk_class Shell_TrayWnd
       ^f12::WinShow ahk_class Shell_TrayWnd
-
-
 
     ; launch chrome
       ^Space::
